@@ -1,0 +1,28 @@
+{
+  "name": "everglades-literacy-astro",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "Everglades Literacy Program site — Astro 7, Tailwind CSS v4, and Sanity-ready content.",
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "scripts": {
+    "dev": "astro dev --host 0.0.0.0 --port 4321",
+    "build": "astro build",
+    "preview": "astro preview --host 0.0.0.0 --port 4321",
+    "check": "astro check",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "astro": "^7.3.2",
+    "tailwindcss": "^4.3.3"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.6",
+    "typescript": "^5.9.2"
+  },
+  "allowScripts": {
+    "esbuild": true
+  }
+}

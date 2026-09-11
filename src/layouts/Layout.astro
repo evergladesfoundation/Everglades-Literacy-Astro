@@ -1,0 +1,66 @@
+---
+import "../styles/global.css";
+
+type Props = {
+  title: string;
+  description?: string;
+};
+
+const {
+  title,
+  description = "Free PreK–12 Everglades lessons, teacher training, and Champion Schools support from the Everglades Foundation.",
+} = Astro.props;
+const pageTitle = title.includes("Everglades Literacy")
+  ? title
+  : `${title} | Everglades Literacy`;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&display=swap"
+      rel="stylesheet"
+    />
+    <title>{pageTitle}</title>
+  </head>
+  <body class="min-h-screen bg-sand text-ink">
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-sun focus:px-3 focus:py-2"
+    >
+      Skip to content
+    </a>
+    <header class="bg-marsh text-sand">
+      <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-6 py-4">
+        <a href="/" class="font-display text-lg font-semibold tracking-tight">
+          Everglades Literacy
+        </a>
+        <nav aria-label="Primary" class="flex flex-wrap gap-x-6 gap-y-2 text-sm font-semibold">
+          <a class="hover:text-sun" href="/toolkit">Teacher Toolkit</a>
+          <a class="hover:text-sun" href="/champion-schools">Champion Schools</a>
+          <a class="hover:text-sun" href="/resources">Resources</a>
+        </nav>
+      </div>
+    </header>
+    <main id="main">
+      <slot />
+    </main>
+    <footer class="mt-16 border-t border-marsh/15 bg-white">
+      <div class="mx-auto max-w-6xl px-6 py-10 text-sm">
+        <p class="font-semibold text-marsh">Everglades Foundation</p>
+        <p class="mt-2 max-w-xl text-ink/80">
+          18001 Old Cutler Road, Suite 625, Palmetto Bay, Florida 33157 · (305) 251-0001 ·
+          Education@EvergladesFoundation.org
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
