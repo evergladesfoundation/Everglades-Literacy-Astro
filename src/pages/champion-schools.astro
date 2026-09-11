@@ -1,0 +1,39 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Champion Schools"
+  description="Learn how schools can become Everglades Champion Schools and start an Intent to Apply."
+>
+  <section class="mx-auto max-w-3xl px-6 py-12">
+    <p class="text-sm font-semibold uppercase tracking-[0.2em] text-water">Recognition</p>
+    <h1 class="mt-3 font-display text-4xl font-bold text-marsh">Become a Champion School</h1>
+    <p class="mt-6 text-lg text-ink/80">
+      The PreK–12 Everglades Champion Schools Program showcases exceptional literacy efforts across
+      a whole school community.
+    </p>
+    <form class="mt-10 space-y-4 rounded-2xl bg-white p-6 ring-1 ring-marsh/10" action="#" method="get">
+      <label class="block text-sm font-semibold" for="school">
+        School name
+      </label>
+      <input id="school" name="school" required class="w-full rounded-lg border border-marsh/20 px-3 py-3" />
+      <label class="block text-sm font-semibold" for="contact">
+        Contact email
+      </label>
+      <input
+        id="contact"
+        name="contact"
+        type="email"
+        required
+        class="w-full rounded-lg border border-marsh/20 px-3 py-3"
+      />
+      <button type="submit" class="rounded-lg bg-sawgrass px-5 py-3 font-semibold text-white hover:bg-marsh">
+        Start Intent to Apply
+      </button>
+      <p class="text-sm text-ink/70">
+        This starter form is local-only until Sanity and staff workflows are connected.
+      </p>
+    </form>
+  </section>
+</Layout>
