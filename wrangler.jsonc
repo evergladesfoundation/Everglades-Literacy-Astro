@@ -1,6 +1,9 @@
 {
   "name": "everglades-literacy-astro",
   "compatibility_date": "2026-09-11",
+  "build": {
+    "command": "npm run build"
+  },
   "assets": {
     "directory": "./dist"
   }
