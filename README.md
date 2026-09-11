@@ -18,6 +18,10 @@ This repository currently ships a working Astro starter: homepage, Teacher Toolk
 | `npm run build` | Production build to `./dist/` |
 | `npm run preview` | Serve the production build locally |
 
+## Cloudflare Workers
+
+The site is a static Astro build. `wrangler.jsonc` points Workers at `./dist` after `npm run build`.
+
 ## Sanity (optional)
 
 Copy `.env.example` to `.env` when a Sanity project is ready. The site does not require those values to develop, search lessons, or build.
